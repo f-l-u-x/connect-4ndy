@@ -139,7 +139,8 @@ function setWinner(winner) {
     }
 }
 
-const socket = new WebSocket("ws://localhost:3000");
+var host = location.origin.replace(/^http/, 'ws')
+const socket = new WebSocket(host);
 
 socket.onmessage = function (event) {
     const message = JSON.parse(event.data);
