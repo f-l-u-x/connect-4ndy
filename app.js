@@ -6,7 +6,7 @@ const websocket = require("ws");
 
 const router = require("./routes/index");
 
-const port = process.argv[2];
+// const port = process.argv[2];
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -217,4 +217,4 @@ splashConnection.on("connection", function (socket) {
 })
 */
 
-server.listen(port);
+server.listen(process.env.PORT || 5000);
