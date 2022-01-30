@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Connect 4</title>
+        <link rel="stylesheet" href="stylesheets/game.css" />
+        <link rel="icon" type="image/x-icon" href="images/favicon.svg" >
+    </head>
+    <body>
+        <main>
+            <!--upper corners-->
+            <section class="corners">
+                <img draggable="false" src="images/corner_UL.svg"/>
+                <img draggable="false" src="images/corner_UR.svg"/>
+            </section>
+
+            <!--turn info-->
+            <div id="turn">Waiting for other player...</div>
+
+            <!--player icons-->
+            <section id="middle">
+                <img id="andy" class="disabled" draggable="false" src="images/andy.svg"/>
+
+                <!--grid-->
+                <section id="board">
+                    <div id="input-columns">
+                        <div id="col1"></div>
+                        <div id="col2"></div>
+                        <div id="col3"></div>
+                        <div id="col4"></div>
+                        <div id="col5"></div>
+                        <div id="col6"></div>
+                        <div id="col7"></div>
+                    </div>
+                    <div id="front-grid"></div>
+                    <div id="back-grid"></div>
+                </section>
+                
+                <img id="otto" class="disabled" draggable="false" src="images/otto.svg"/>
+            </section>
+
+            <!--bottom corners-->
+            <section class="corners">
+                <img draggable="false" src="images/corner_BL.svg">
+                <!--timer-->
+                <div id="timer">00:00</div>
+                <img draggable="false" src="images/corner_BR.svg">
+            </section>     
+        </main>
+
+        <script src="javascripts/messages.js"></script>
+        <script src="javascripts/client.js"></script>
+        <script src="javascripts/extra.js"></script>
+    </body>
+</html>

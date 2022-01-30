@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    min-width: 1366px;
+    min-height: 768px;
+    color: #0D489C;
+    font-family: "Bungee Shade";
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    -webkit-user-drag: none;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.corners {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.anim {
+    animation-timing-function: ease;
+    animation-duration: 2s;
+}

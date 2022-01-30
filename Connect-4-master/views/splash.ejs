@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Connect 4</title>
+        <link rel="stylesheet" href="stylesheets/splash.css" />
+        <link rel="icon" type="image/x-icon" href="images/favicon.svg" >
+    </head>
+    <body>
+        <main>
+            <!--upper corners-->
+            <section class="corners">
+                <img draggable="false" src="images/corner_UL.svg"/>
+                <img draggable="false" src="images/corner_UR.svg"/>
+            </section>
+            
+            <!--title-->
+            <section id="title">
+                <div>Connect 4</div>
+                <img src="images/center_line.svg"/>
+            </section>
+
+            <!--buttons-->
+            <section id="buttons">
+                <section id="play">
+                    <form action="/play" class="fancy">
+                        <button type="submit">Play</button>
+                    </form>
+                </section>
+                <section id="rules">
+                    <div class="fancy">Rules</div>
+                </section>
+            </section>
+            
+            <!--stats-->
+            <section id="stats">
+                <section>
+                    <div class="anim" id="total_games"><%= totalGames %></div>
+                    <div>Total games</div>
+                </section>
+                <section> 
+                    <div class="anim" id="online_players"><%= onlinePlayers %></div>
+                    <div>Online</div>
+                </section>
+                <section>
+                    <div class="anim" id="fastest_game"><%= fastestGame != Infinity ? `${String(Math.trunc(fastestGame / 60)).padStart(2, "0")}:${String(fastestGame % 60).padStart(2, "0")}` : "None" %></div>
+                    <div>Fastest game</div>
+                </section>
+            </section>
+            
+            <!--bottom corners-->
+            <section class="corners">
+                <img draggable="false" src="images/corner_BL.svg"/>
+                <img draggable="false" src="images/corner_BR.svg"/>
+            </section>
+
+            <!--rules video-->
+            <section id="overlay">
+                <iframe id="youtube" width="1024" height="576" src="" title="Rules" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+        </main>
+
+        <script src="javascripts/stats.js"></script>
+        <script src="javascripts/extra.js"></script>
+    </body>
+</html>
